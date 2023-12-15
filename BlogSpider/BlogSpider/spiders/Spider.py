@@ -1,8 +1,8 @@
 import scrapy
-from scrapy.spuders import CrawlSpider, Rule
+from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
 
-class MySpider(CrawlSpider):
+class BlogSpider(CrawlSpider):
     name = 'BlogSpider'
     #allowed_domains = ['domain.com']
     start_urls = ['http://bit.ly/3GOY3RG']
@@ -17,5 +17,3 @@ class MySpider(CrawlSpider):
         content = response.xpath('//p/text()').extract()[0]
 
         yield {'title': title, 'content': content}
-
-        pass
