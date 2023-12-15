@@ -10,4 +10,6 @@ from itemadapter import ItemAdapter
 
 class BlogspiderPipeline:
     def process_item(self, item, spider):
+        item['title'] = item['title'].strip()  # remove leading/trailing whitespace
+        item['content'] = item['content'].strip()
         return item
