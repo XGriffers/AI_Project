@@ -1,19 +1,28 @@
-# AI Content Generator Web App
+# AI Blog Content Generator
 
-This project aims to build a web app that uses AI to scrape online content, rewrite/summarize it, and publish new blog posts in predefined niches.
+This project aims to build a web application that uses AI to scrape online content, rewrite/summarize it, and publish new blog posts in predefined niches. The niches we focus on include making money online, digital marketing, personal finance, fitness, and self-improvement.
 
 ## Project Structure
 
-1. **Web Scraping with Scrapy Spider**: The Scrapy spider is programmed with a set of seed URLs related to the niches. It dynamically discovers new URLs, follows links, extracts relevant content, and outputs the scraped data for ingestion into the AI pipeline.
+The project is divided into several parts:
 
-2. **AI Pipeline Architecture**: The AI pipeline ingests the scraped data, preprocesses it, fine-tunes the AI model (e.g., GPT-3) on the specific task, generates new blog posts, and supplies the rewritten posts via a JSON API.
+1. **Web Scraping with BeautifulSoup**: We define a scraping algorithm to pull data from websites in an array and push it to a JSON file. The scraped data is then output for ingestion into the AI pipeline.
 
-3. **Web App Development**: The Ruby on Rails web app consumes the JSON API, displays the AI-generated content, and provides user interaction features.
+2. **AI Pipeline Architecture**: The AI pipeline will consist of several stages:
 
-## Getting Started
+    - **Data Ingestion**: We use the BeautifulSoup module to collect content from the chosen niches.
+    - **Data Preprocessing**: The scraped data is cleaned and formatted for the AI model.
+    - **Feature Engineering and Selection**: If necessary, we perform feature engineering and selection.
+    - **Model Training**: We fine-tune the AI model (To Be Determined) on the specific task.
+    - **Model Evaluation**: We ensure the AI model generates high-quality content.
+    - **Content Generation**: We generate new blog posts based on the processed data.
+    - **API Integration**: We develop a JSON API for the AI pipeline to supply rewritten posts.
 
-To get started with this project, you'll need to have Python and Ruby on Rails installed on your machine. You'll also need to install the Scrapy library for Python.
+3. **Web App Development**: The web app is developed using Ruby on Rails. The steps involved are:
 
-## Running the Project
-
-Detailed instructions for running the project will be provided once the development is complete.
+    - **Setup**: We set up the Ruby on Rails web app.
+    - **Feature Implementation**: We implement the web app features.
+    - **Integration**: We integrate the web app with the AI pipeline via the JSON API.
+    - **Design**: We style and design the user interface.
+    - **Testing**: We test and refine the web app.
+    - **Deployment**: We deploy the web app.
