@@ -7,6 +7,7 @@ from sklearn.model_selection import train_test_split
 
 
 
+
 def prepare_data(x, y):
     x_train, y_train, x_test, y_test = train_test_split(x, y, test_size=0.2)
      # Convert labels to integer encoding
@@ -17,10 +18,11 @@ def prepare_data(x, y):
 
 
 def create_model(vocab_size, max_length, embedding_dim=256):
-   
+
+    
     model = Sequential()
     model.add(Embedding(input_dim=vocab_size, output_dim=embedding_dim, input_length=max_length))
-    model.add(LSTM(units=64, return_sequences=True))
+    model.add(LSTM(units=32, return_sequences=True))
     model.add(Dropout(0.2))
     model.add(LSTM(units=64))
     model.add(Dense(units=vocab_size, activation='relu'))

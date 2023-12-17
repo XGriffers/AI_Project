@@ -26,6 +26,14 @@ The project is divided into several parts:
     - **Design**: We style and design the user interface.
     - **Testing**: We test and refine the web app.
     - **Deployment**: We deploy the web app.
+
 **Progress**
 
 We have successfully implemented the web scraping part using BeautifulSoup and created a JSON file with the scraped data. The AI pipeline is set up with a model architecture that includes an LSTM layer and a Dense layer with a softmax activation function. The model is trained on the scraped data and is able to generate new text, although the quality of the generated text needs improvement. We are currently working on improving the quality of the generated text by fine-tuning the model and exploring different data sources for web scraping.
+
+Data Loading and Processing: The code begins by loading and processing a JSON data file. The data is extracted and tokenized, converting the text data into a format suitable for machine learning.
+Model Preparation: The code then prepares a tokenizer with a specified vocabulary size and fits it on the text data. It also creates sequences of tokens to be used as input to the model.
+Data Splitting: The sequences are split into training and testing sets using the prepare_data function from the model module.
+Model Training: The code checks if a pre-trained model exists. If it does, the model is loaded; otherwise, a new model is created and trained using the training data. The model is then saved for future use.
+Text Generation: The trained model is used to generate new text based on seed texts. The generated text is appended to a list.
+Output Saving: The list of generated texts is saved to a JSON file.

@@ -23,9 +23,10 @@ for url in urls:
 
 filename = 'data.json'
 
-with open(filename, 'w') as f:
+with open(filename, 'a') as f:
     json.dump(data, f, indent=4)
-    print('Data saved to', filename)
+    print('Data appended to', filename)
+
 
 source_file = 'data.json'
 destination_dir = '../data/'
