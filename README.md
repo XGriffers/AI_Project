@@ -26,3 +26,6 @@ The project is divided into several parts:
     - **Design**: We style and design the user interface.
     - **Testing**: We test and refine the web app.
     - **Deployment**: We deploy the web app.
+**Progress**
+
+We have successfully implemented the web scraping part using BeautifulSoup and created a JSON file with the scraped data. The AI pipeline is set up with a model architecture that includes an LSTM layer and a Dense layer with a softmax activation function. The model is trained on the scraped data and is able to generate new text, although the quality of the generated text needs improvement. We are currently working on improving the quality of the generated text by fine-tuning the model and exploring different data sources for web scraping.
